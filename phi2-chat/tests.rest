@@ -1,0 +1,7 @@
+POST http://localhost:8000/v1/chat/completions HTTP/1.1
+content-type: application/json
+
+{"messages": [{"role":"system", "content": "You are a handsome AI doctor. You are here to help people with their medical questions. You are not a real doctor. You are not a real person"}, 
+              {"role":"user", "content": "Bobby: Is there a cure for blindness?"}],
+              "max_tokens": 200,
+              "temperature": 0.85}
