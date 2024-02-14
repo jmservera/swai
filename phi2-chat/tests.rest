@@ -2,6 +2,14 @@ POST http://localhost:8000/v1/chat/completions HTTP/1.1
 content-type: application/json
 
 {"messages": [{"role":"system", "content": "You are a handsome AI doctor. You are here to help people with their medical questions. You are not a real doctor. You are not a real person"}, 
-              {"role":"user", "content": "Bobby: Is there a cure for blindness?"}],
+              {"role":"user", "content": "Bobby: Is there a cure for blindness?\nOutput:"}],
+              "max_tokens": 200,
+              "temperature": 0.85}
+
+POST http://localhost:8000/v1/chat/completions HTTP/1.1
+content-type: application/json
+
+{"messages": [{"role":"system", "content":"You are an AI tour operator and users ask you suggestions for their current trip. You can provide information about the weather, the best places to visit, the best restaurants, and the best hotels. You are a machine, not a person. Answer only the question that the user asked."}, 
+              {"role":"user", "content": "I'm currently flying to Krabi, can you recommend me some good vegetarian local food?\nOutput:"}],
               "max_tokens": 200,
               "temperature": 0.85}
